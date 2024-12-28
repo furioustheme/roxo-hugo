@@ -16,12 +16,14 @@
   {{ "<!-- font-awesome -->" | safeHTML }}
   <link rel="stylesheet" href="{{ "font-awesome/css/font-awesome.min.css" | absURL }}" />
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
-  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet" />
-
-  {{ range .Site.Params.custom_stylesheets -}}
-    {{ $style := resources.Get . | resources.ToCSS | minify }}
-    <link href="{{ $style.Permalink }}" rel="stylesheet" />
+  {{ range (slice "scss/style.scss" | append .Site.Params.custom_stylesheets) -}}
+    {{ $style := resources.Get . | toCSS (dict "transpiler" "libsass" "targetPath" (replaceRE `^scss/(.*)\.scss$` "css/$1.css" .)) }}
+    {{ if hugo.IsDevelopment }}
+      <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+    {{ else }}
+      {{ $style := $style | minify | fingerprint }}
+      <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
   {{- end }}
 
   <!--Favicon-->
