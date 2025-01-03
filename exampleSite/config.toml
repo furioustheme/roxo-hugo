@@ -99,7 +99,7 @@ summarylength = 25
     secondary_button_url = "portfolio"
 
   [params.footer]
-    params.footer.qr_print = false
+    qr_print = false
     # Footer Contact Info
     [params.footer.contactInfo]
       title   = "Contact Info"
