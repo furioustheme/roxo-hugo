@@ -65,8 +65,8 @@ summarylength = 25
   favicon_shortcut_icon = "images/favicon.png"
   custom_stylesheets    = []
   dateFormat            = "26 FEB 1994"
-  description           = "Roxo Hugo themes | Design Agency Template by StaticMania"
-  author                = "StaticMania"
+  description           = "Roxo Hugo themes | Design Agency Template by Furioustheme"
+  author                = "Furioustheme"
   fabform               = "https://fabform.io/f/USAg2Jl"
 
   [params.contactForm]
