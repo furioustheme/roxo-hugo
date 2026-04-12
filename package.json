@@ -1,7 +1,7 @@
 {
   "name": "roxo-hugo",
   "version": "1.0.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "Furioustheme",
   "scripts": {
     "dev": "hugo server",
