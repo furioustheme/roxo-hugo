@@ -10,19 +10,29 @@
   {{ end }}
   {{ hugo.Generator }}
 
-  {{ "<!-- Bootstrap -->" | safeHTML }}
-  {{ $bootstrap := resources.Get "css/bootstrap.css" | minify }}
-  <link rel="stylesheet" href="{{ $bootstrap.Permalink }}" />
-  {{ "<!-- font-awesome -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ "font-awesome/css/font-awesome.min.css" | absURL }}" />
+  {{ "<!-- CSS Plugins -->" | safeHTML }}
+  {{ range site.Params.plugins.css }}
+  <link rel="stylesheet" href="{{ .link | absURL }}" />
+  {{ end }}
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
-  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
+  {{ $style := resources.Get "scss/style.scss" | css.Sass | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
   {{ range .Site.Params.custom_stylesheets -}}
-    {{ $style := resources.Get . | resources.ToCSS | minify }}
+    {{ $style := resources.Get . | css.Sass | minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet" />
   {{- end }}
+
+  {{ "<!-- Google Analytics -->" | safeHTML }}
+  {{ with site.Config.Services.GoogleAnalytics.ID }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
 
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ .Site.Params.favicon_shortcut_icon | absURL }}" type="image/x-icon" />

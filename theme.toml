@@ -6,7 +6,7 @@ description = "Roxo Hugo is a digital agency Hugo theme for creative agencies,  
 homepage = "https://roxo-hugo.staticmania.com/"
 tags = ['clean', 'minimal', 'agency', 'corporate', 'creative agency', 'creative studio', 'portfolio', 'staticmania', 'responsive', 'blog', 'customizable', 'company', 'creative', 'agency template']
 features = ['bootstrap 4', 'responsive design', 'blog', 'responsive','landing-page', 'minimal', 'business', 'agency-template', 'hugo-theme', 'portfolio', 'company', 'creative', 'contact-form']
-min_version = "0.58.0"
+min_version = "0.160.0"
 
 [author]
   name = "Static Mania"

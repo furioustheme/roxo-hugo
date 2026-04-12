@@ -1,0 +1,18 @@
+<section class="site-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="site-page-header-title">{{ .Title }}</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">{{ i18n "home" | default "Home" }}</a></li>
+            {{ with .Parent }}
+            <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+            <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

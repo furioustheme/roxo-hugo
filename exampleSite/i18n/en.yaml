@@ -1,0 +1,20 @@
+- id: home
+  translation: "Home"
+
+- id: read_more
+  translation: "Read More"
+
+- id: view_project
+  translation: "View Project"
+
+- id: more_works
+  translation: "More Works"
+
+- id: send_message
+  translation: "Send Message"
+
+- id: back_to_top
+  translation: "Back to Top"
+
+- id: next_project
+  translation: "Next Project"

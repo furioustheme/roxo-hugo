@@ -1,3 +1,29 @@
 {{ define "main" }}
-
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      </div>
+    </div>
+    <div class="row">
+      {{ range .Paginator.Pages }}
+      <div class="col-lg-4 col-md-6">
+        <div class="site-project-item">
+          {{ with .Params.image }}
+          <div class="site-project-item-thumbnail">
+            <img src="{{ . | absURL }}" alt="{{ $.Title }}">
+          </div>
+          {{ end }}
+          <div class="site-project-item-content">
+            <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <p>{{ .Summary | plainify | truncate 160 }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
