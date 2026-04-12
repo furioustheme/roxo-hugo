@@ -1,5 +1,4 @@
-{{ with site.GetPage "sections/team" }}
-{{ with .Params }}
+{{ with .Params.team }}
   {{ if .enable }}
   <section class="site-team">
     <div class="container">
@@ -33,5 +32,4 @@
     </div>
   </section>
   {{ end }}
-{{ end }}
 {{ end }}

@@ -1,4 +1,5 @@
-{{ with .Site.Params.call_to_action }}
+{{ with site.GetPage "sections/call-to-action" }}
+{{ with .Params }}
   {{ if .enable }}
   <section class="site-cta" style='background-image: url("{{ .background_image | absURL }}");'>
     <div class="container">
@@ -30,4 +31,5 @@
     </div>
   </section>
   {{ end }}
+{{ end }}
 {{ end }}

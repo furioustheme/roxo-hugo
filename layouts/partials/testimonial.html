@@ -1,5 +1,4 @@
-{{ with site.GetPage "sections/testimonial" }}
-{{ with .Params }}
+{{ with .Params.testimonial }}
   {{ if .enable }}
   <section class="site-testimonial">
     <div class="container">
@@ -36,5 +35,4 @@
     </div>
   </section>
   {{ end }}
-{{ end }}
 {{ end }}

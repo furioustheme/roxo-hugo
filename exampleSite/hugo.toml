@@ -88,16 +88,6 @@ summarylength = 25
     name   = "Get in touch"
     url    = "contact"
 
-  [params.banner]
-    enable               = true
-    background_image     = "images/backgrounds/hero-background.jpg"
-    heading              = "We're a Design Studio That Belies In the Great Ideas"
-    tagline              = "WE WORK HARD, WE PLAY HARD"
-    primary_button       = "See Our Works"
-    primary_button_url   = "portfolio"
-    secondary_button     = "Connect with Us"
-    secondary_button_url = "contact"
-
   [params.blog]
     read_more = "read more"
 
@@ -108,15 +98,6 @@ summarylength = 25
     view_project = "view project"
     more_works   = "MORE WORKS"
     scroll_down  = "scroll down"
-
-  [params.call_to_action]
-    enable               = true
-    background_image     = "images/backgrounds/cta-background.jpg"
-    title                = "LET'S WORK TOGETHER"
-    primary_button       = "Submit Query"
-    primary_button_url   = "contact"
-    secondary_button     = "Not Convinced"
-    secondary_button_url = "portfolio"
 
   [params.footer]
     qr_print = false

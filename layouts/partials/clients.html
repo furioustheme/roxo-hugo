@@ -1,5 +1,4 @@
-{{ with site.GetPage "sections/clients" }}
-{{ with .Params }}
+{{ with .Params.clients }}
   {{ if .enable }}
   <section class="site-client">
     <div class="container">
@@ -20,5 +19,4 @@
     </div>
   </section>
   {{ end }}
-{{ end }}
 {{ end }}

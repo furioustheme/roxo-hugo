@@ -1,5 +1,4 @@
-{{ with site.GetPage "sections/counter" }}
-{{ with .Params }}
+{{ with .Params.counter }}
   {{ if .enable }}
   <section class="site-counter" id="counter">
     <div class="container">
@@ -21,5 +20,4 @@
     </div>
   </section>
   {{ end }}
-{{ end }}
 {{ end }}
