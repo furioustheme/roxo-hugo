@@ -1,4 +1,4 @@
-## 🌟 Furioustheme Light
+## 🌟 Roxo Hugo
 
 A hugo powered static website.
 
