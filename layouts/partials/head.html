@@ -35,6 +35,11 @@
   {{ end }}
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="{{ .Site.Params.favicon_shortcut_icon | absURL }}" type="image/x-icon" />
-  <link rel="icon" href="{{ .Site.Params.favicon_icon | absURL }}" type="image/x-icon" />
+  {{ $faviconTypes := dict ".ico" "image/x-icon" ".png" "image/png" ".svg" "image/svg+xml" ".gif" "image/gif" ".jpg" "image/jpeg" ".jpeg" "image/jpeg" }}
+  {{ with .Site.Params.favicon_shortcut_icon }}
+  <link rel="shortcut icon" href="{{ . | absURL }}" type="{{ index $faviconTypes (path.Ext .) | default "image/x-icon" }}" />
+  {{ end }}
+  {{ with .Site.Params.favicon_icon }}
+  <link rel="icon" href="{{ . | absURL }}" type="{{ index $faviconTypes (path.Ext .) | default "image/x-icon" }}" />
+  {{ end }}
 </head>
