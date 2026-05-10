@@ -1,6 +1,6 @@
 ## 🌟 Roxo Hugo
 
-A Hugo powered static website built with Tailwind CSS. built with Tailwind CSS.
+A Hugo-powered static website built with Tailwind CSS.
 
 ### Prerequisites
 
