@@ -1,0 +1,38 @@
+name = "Roxo Hugo"
+license = "MIT"
+licenselink = "https://github.com/sitepins/roxo-hugo/blob/main/LICENSE"
+description = "A Hugo-powered static website built with Tailwind CSS."
+homepage = "https://github.com/sitepins/roxo-hugo"
+demosite = "https://roxo-hugo-site.vercel.app"
+min_version = "0.161.0"
+
+tags = [
+  "blog",
+  "portfolio",
+  "responsive",
+  "modern",
+  "light",
+  "multilingual",
+  "contact",
+  "tailwindcss",
+  "starter",
+  "template",
+]
+
+features = [
+  "Multilingual Support",
+  "Portfolio Section",
+  "Blog Section",
+  "Responsive Design",
+  "Tailwind CSS",
+  "Contact Forms",
+]
+
+[author]
+name = "sitepins"
+homepage = "https://github.com/sitepins"
+
+[original]
+author = "Sitepins"
+homepage = "https://sitepins.com/"
+repo = "https://github.com/sitepins/roxo-hugo"
