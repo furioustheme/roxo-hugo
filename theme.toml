@@ -1,31 +1,43 @@
 name = "Roxo Hugo"
 license = "MIT"
 licenselink = "https://github.com/sitepins/roxo-hugo/blob/main/LICENSE"
-description = "A Hugo-powered static website built with Tailwind CSS."
+description = "Roxo Hugo is a digital agency Hugo theme for creative agencies, freelancers, graphic designers, and photographers. Can be used for any kind of corporate websites who provides digital services with many expertise such as Design, Digital Products, Development, Campaign & Content, Employer Branding."
 homepage = "https://github.com/sitepins/roxo-hugo"
 demosite = "https://roxo-hugo-site.vercel.app"
 min_version = "0.161.0"
 
 tags = [
-  "blog",
+  "agency",
+  "creative",
   "portfolio",
-  "responsive",
-  "modern",
-  "light",
-  "multilingual",
-  "contact",
+  "freelancer",
+  "photography",
+  "graphic-design",
+  "digital-agency",
+  "corporate",
+  "business",
+  "marketing",
+  "branding",
+  "services",
+  "contact-form",
   "tailwindcss",
-  "starter",
-  "template",
+  "landing-page",
 ]
 
 features = [
-  "Multilingual Support",
-  "Portfolio Section",
+  "Creative Agency Design",
+  "Portfolio Showcase",
   "Blog Section",
+  "Freelancer Friendly",
+  "Photography Support",
+  "Corporate Business Layout",
+  "Digital Marketing Pages",
+  "Branding & Service Sections",
   "Responsive Design",
+  "Modern UI",
+  "Contact Form Integration",
   "Tailwind CSS",
-  "Contact Forms",
+  "Landing Page Ready",
 ]
 
 [author]
